@@ -27,6 +27,7 @@ module Feedjira
       element :"itunes:episodeType", as: :itunes_episode_type
 
       # If summary is not present, use the description tag
+      element :"description", as: :description
       element :"itunes:summary", as: :itunes_summary
       element :enclosure, value: :length, as: :enclosure_length
       element :enclosure, value: :type, as: :enclosure_type
