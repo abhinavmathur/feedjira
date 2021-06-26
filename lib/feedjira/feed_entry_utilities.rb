@@ -41,7 +41,7 @@ module Feedjira
     end
 
     def sanitize!
-      %w[title author summary content image].each do |name|
+      %w[title author image].each do |name|
         if respond_to?(name) && send(name).respond_to?(:sanitize!)
           send(name).send(:sanitize!)
         end
